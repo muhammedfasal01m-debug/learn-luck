@@ -120,128 +120,182 @@
 //     );
 //   }
 // }
-import 'package:material_ui/material_ui.dart';
+// import 'package:material_ui/material_ui.dart';
+
+// void main() {
+//   runApp(const LoginApp());
+// }
+
+// class LoginApp extends StatelessWidget {
+//   const LoginApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       title: 'Login Demo',
+//       theme: ThemeData(
+//         colorScheme: ColorScheme.fromSeed(
+//           seedColor: const Color.fromARGB(255, 63, 181, 116),
+//         ),
+//         useMaterial3: true,
+//       ),
+//       home: const LoginPage(),
+//     );
+//   }
+// }
+
+// class LoginPage extends StatelessWidget {
+//   const LoginPage({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: SafeArea(
+//         child: Center(
+//           child: SingleChildScrollView(
+//             padding: const EdgeInsets.all(24),
+//             child: ConstrainedBox(
+//               constraints: const BoxConstraints(maxWidth: 420),
+//               child: Column(
+//                 crossAxisAlignment: CrossAxisAlignment.stretch,
+//                 children: [
+//                   const Icon(
+//                     Icons.lock_outline,
+//                     size: 64,
+//                     color: Color.fromARGB(255, 181, 63, 63),
+//                   ),
+//                   const SizedBox(height: 24),
+
+//                   Text(
+//                     'Welcome Back',
+//                     textAlign: TextAlign.center,
+//                     style: Theme.of(context).textTheme.headlineMedium
+//                         ?.copyWith(fontWeight: FontWeight.bold),
+//                   ),
+//                   const SizedBox(height: 7),
+
+//                   const Text(
+//                     'Sign in to your account',
+//                     textAlign: TextAlign.center,
+//                   ),
+//                   const SizedBox(height: 32),
+
+//                   TextField(
+//                     keyboardType: TextInputType.emailAddress,
+//                     decoration: InputDecoration(
+//                       labelText: 'Email',
+//                       hintText: 'you@example.com',
+//                       prefixIcon: const Icon(Icons.email_outlined),
+//                       border: OutlineInputBorder(
+//                         borderRadius: BorderRadius.circular(12),
+//                       ),
+//                     ),
+//                   ),
+//                   const SizedBox(height: 16),
+
+//                   TextField(
+//                     obscureText: true,
+//                     decoration: InputDecoration(
+//                       labelText: 'Password',
+//                       prefixIcon: const Icon(Icons.lock_clock_outlined),
+//                       border: OutlineInputBorder(
+//                         borderRadius: BorderRadius.circular(12),
+//                       ),
+//                     ),
+//                   ),
+
+//                   Align(
+//                     alignment: Alignment.centerRight,
+//                     child: TextButton(
+//                       onPressed: () {},
+//                       child: const Text('Forgot password?'),
+//                     ),
+//                   ),
+//                   const SizedBox(height: 16),
+
+//                   ElevatedButton(
+//                     style: ElevatedButton.styleFrom(
+//                       padding: const EdgeInsets.symmetric(vertical: 16),
+//                       backgroundColor: const Color.fromARGB(255, 63, 163, 181),
+//                       foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+//                     ),
+//                     onPressed: () {
+//                       ScaffoldMessenger.of(context).showSnackBar(
+//                         const SnackBar(content: Text('Login button pressed')),
+//                       );
+//                     },
+//                     child: const Text('Log In'),
+//                   ),
+//                   const SizedBox(height: 16),
+
+//                   Row(
+//                     mainAxisAlignment: MainAxisAlignment.center,
+//                     children: [
+//                       const Text("Don't have an account?"),
+//                       TextButton(
+//                         onPressed: () {},
+//                         child: const Text('Sign up'),
+//                       ),
+//                     ],
+//                   ),
+//                 ],
+//               ),
+//             ),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const LoginApp());
+  runApp(const MyApp());
 }
 
-class LoginApp extends StatelessWidget {
-  const LoginApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Login Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 63, 181, 116),
-        ),
-        useMaterial3: true,
-      ),
-      home: const LoginPage(),
-    );
-  }
-}
-
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Center(
-          child: SingleChildScrollView(
-            padding: const EdgeInsets.all(24),
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: 420),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  const Icon(
-                    Icons.lock_outline,
-                    size: 64,
-                    color: Color.fromARGB(255, 181, 63, 63),
-                  ),
-                  const SizedBox(height: 24),
-
-                  Text(
-                    'Welcome Back',
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headlineMedium
-                        ?.copyWith(fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(height: 7),
-
-                  const Text(
-                    'Sign in to your account',
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 32),
-
-                  TextField(
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                      labelText: 'Email',
-                      hintText: 'you@example.com',
-                      prefixIcon: const Icon(Icons.email_outlined),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-
-                  TextField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      labelText: 'Password',
-                      prefixIcon: const Icon(Icons.lock_clock_outlined),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                    ),
-                  ),
-
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: TextButton(
-                      onPressed: () {},
-                      child: const Text('Forgot password?'),
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(vertical: 16),
-                      backgroundColor: const Color.fromARGB(255, 63, 163, 181),
-                      foregroundColor: const Color.fromARGB(255, 255, 255, 255),
-                    ),
-                    onPressed: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Login button pressed')),
+      home: Scaffold(
+        appBar: AppBar(title: const Text('my app')),
+        body: Center(
+          child: Column(
+            children: [
+              Text('welcome'),
+              Container(child: const Text('Flutterbasics')),
+              const SizedBox(height: 19),
+              Container(child: Text('Day 3 Task')),
+              ElevatedButton(
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (dialogcontext) {
+                      return AlertDialog(
+                        title: const Text('Add taskk'),
+                        content: const Text('Add a new taskk?'),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pop(dialogcontext);
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(content: Text('Task added')),
+                              );
+                            },
+                            child: const Text('ok'),
+                          ),
+                        ],
                       );
                     },
-                    child: const Text('Log In'),
-                  ),
-                  const SizedBox(height: 16),
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Text("Don't have an account?"),
-                      TextButton(
-                        onPressed: () {},
-                        child: const Text('Sign up'),
-                      ),
-                    ],
-                  ),
-                ],
+                  );
+                },
+                child: const Text('Add Taskk'),
               ),
-            ),
+            ],
           ),
         ),
       ),
