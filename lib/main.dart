@@ -25,12 +25,13 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           children: [
             const Text('WelcomeBack'),
+            TextField(decoration: InputDecoration(label: const Text('Name'))),
             TextField(decoration: InputDecoration(label: const Text('Email'))),
             TextField(
               obscureText: true,
               decoration: InputDecoration(label: const Text('Password')),
             ),
-            TextField(decoration: InputDecoration(label: const Text('Name'))),
+
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
